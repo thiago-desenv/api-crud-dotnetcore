@@ -64,3 +64,6 @@ D:\Documentos\Cursos\Udemy\API Arquitetura com DDD\curso_api_netcore\src\Api.App
 D:\Documentos\Cursos\Udemy\API Arquitetura com DDD\curso_api_netcore\src\Api.Application\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
 D:\Documentos\Cursos\Udemy\API Arquitetura com DDD\curso_api_netcore\src\Api.Application\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 D:\Documentos\Cursos\Udemy\API Arquitetura com DDD\curso_api_netcore\src\Api.Application\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Documentos\Cursos\Udemy\API Arquitetura com DDD\curso_api_netcore\src\Api.Application\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Documentos\Cursos\Udemy\API Arquitetura com DDD\curso_api_netcore\src\Api.Application\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\Documentos\Cursos\Udemy\API Arquitetura com DDD\curso_api_netcore\src\Api.Application\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

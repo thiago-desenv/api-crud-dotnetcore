@@ -1,6 +1,8 @@
 using System;
 using Api.CrossCutting.DependencyInjection;
 using Api.Domain.Security;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -34,6 +36,28 @@ namespace application
                 .GetSection("TokenConfigurations"))
                 .Configure(tokenConfiguration);
             services.AddSingleton(tokenConfiguration);
+
+            services.AddAuthentication(authOptions =>
+            {
+                authOptions.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                authOptions.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(bearerOptions =>
+            {
+                var paramsValiation = bearerOptions.TokenValidationParameters;
+                paramsValiation.IssuerSigningKey = signingConfigurations.Key;
+                paramsValiation.ValidAudience = tokenConfiguration.Audience;
+                paramsValiation.ValidIssuer = tokenConfiguration.Issuer;
+                paramsValiation.ValidateIssuerSigningKey = true;
+                paramsValiation.ValidateLifetime = true;
+                paramsValiation.ClockSkew = TimeSpan.Zero;
+            });
+
+            services.AddAuthorization(auth =>
+            {
+                auth.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
+                        .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
+                        .RequireAuthenticatedUser().Build());
+            });
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

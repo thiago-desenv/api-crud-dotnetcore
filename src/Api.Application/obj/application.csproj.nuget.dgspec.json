@@ -1,41 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Application\\application.csproj": {}
+    "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Application\\application.csproj": {}
   },
   "projects": {
-    "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Application\\application.csproj": {
+    "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Application\\application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Application\\application.csproj",
+        "projectUniqueName": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Application\\application.csproj",
         "projectName": "application",
-        "projectPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Application\\application.csproj",
-        "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Application\\obj\\",
+        "projectPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Application\\application.csproj",
+        "packagesPath": "C:\\Users\\t.xavier.ferreira\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\t.xavier.ferreira\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.CrossCutting\\CrossCutting.csproj": {
-                "projectPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.CrossCutting\\CrossCutting.csproj"
+              "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.CrossCutting\\CrossCutting.csproj": {
+                "projectPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.CrossCutting\\CrossCutting.csproj"
               },
-              "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Domain\\Domain.csproj": {
-                "projectPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Domain\\Domain.csproj"
+              "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Domain\\Domain.csproj"
               },
-              "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Service\\Service.csproj": {
-                "projectPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Service\\Service.csproj"
+              "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Service\\Service.csproj"
               }
             }
           }
@@ -81,38 +79,36 @@
         }
       }
     },
-    "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.CrossCutting\\CrossCutting.csproj": {
+    "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.CrossCutting\\CrossCutting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.CrossCutting\\CrossCutting.csproj",
+        "projectUniqueName": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.CrossCutting\\CrossCutting.csproj",
         "projectName": "CrossCutting",
-        "projectPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.CrossCutting\\CrossCutting.csproj",
-        "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.CrossCutting\\obj\\",
+        "projectPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.CrossCutting\\CrossCutting.csproj",
+        "packagesPath": "C:\\Users\\t.xavier.ferreira\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.CrossCutting\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\t.xavier.ferreira\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Data\\Data.csproj": {
-                "projectPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Data\\Data.csproj"
+              "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Data\\Data.csproj"
               },
-              "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Domain\\Domain.csproj": {
-                "projectPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Domain\\Domain.csproj"
+              "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Domain\\Domain.csproj"
               },
-              "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Service\\Service.csproj": {
-                "projectPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Service\\Service.csproj"
+              "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Service\\Service.csproj"
               }
             }
           }
@@ -151,32 +147,30 @@
         }
       }
     },
-    "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Data\\Data.csproj": {
+    "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Data\\obj\\",
+        "projectPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\t.xavier.ferreira\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\t.xavier.ferreira\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Domain\\Domain.csproj": {
-                "projectPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Domain\\Domain.csproj"
+              "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Domain\\Domain.csproj"
               }
             }
           }
@@ -222,6 +216,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -231,24 +239,22 @@
         }
       }
     },
-    "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Domain\\Domain.csproj": {
+    "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Domain\\obj\\",
+        "projectPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\t.xavier.ferreira\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\t.xavier.ferreira\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -282,6 +288,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -291,35 +311,33 @@
         }
       }
     },
-    "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Service\\Service.csproj": {
+    "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Service\\Service.csproj",
-        "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Service\\obj\\",
+        "projectPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\t.xavier.ferreira\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\t.xavier.ferreira\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Data\\Data.csproj": {
-                "projectPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Data\\Data.csproj"
+              "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Data\\Data.csproj"
               },
-              "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Domain\\Domain.csproj": {
-                "projectPath": "D:\\Documentos\\Cursos\\Udemy\\API Arquitetura com DDD\\curso_api_netcore\\src\\Api.Domain\\Domain.csproj"
+              "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\t.xavier.ferreira\\Documents\\C#\\API\\api-crud-dotnetcore\\src\\Api.Domain\\Domain.csproj"
               }
             }
           }

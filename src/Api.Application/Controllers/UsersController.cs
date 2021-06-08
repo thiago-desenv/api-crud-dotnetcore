@@ -36,17 +36,16 @@ namespace Api.Application.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         [Authorize("Bearer")]
-        [Route("{id}", Name = "GetWithId")]
-        public async Task<ActionResult> Get(Guid Id)
+        public async Task<ActionResult> Get(Guid id)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             try
             {
-                return Ok(await _service.Get(Id));
+                return Ok(await _service.Get(id));
             }
             catch (ArgumentException ex)
             {

@@ -1,3 +1,4 @@
+using System;
 using Api.Data.Context;
 using Api.Data.Implementations;
 using Api.Data.Repository;
@@ -15,10 +16,20 @@ namespace Api.CrossCutting.DependencyInjection
             serviceCollection.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             serviceCollection.AddScoped<IUserRepository, UserImplementation>();
 
-            serviceCollection.AddDbContext<MyContext>(
-                options => options.UseSqlServer(@"Data Source=DESKTOP-2GT602A\SQLEXPRESS;Initial Catalog=dbapi;Integrated Security=True")
-            //options => options.UseMySql("Server=localhost;Port=3306;Database=xxx;Uid=root;Pwd=xxx")
-            );
+            if (Environment.GetEnvironmentVariable("DATABASE").ToUpper() == "SQLSERVER")
+            {
+                serviceCollection.AddDbContext<MyContext>
+                (
+                    options => options.UseSqlServer(Environment.GetEnvironmentVariable("DB_CONNECTION_SQLSERVER"))
+                );
+            }
+            else
+            {
+                serviceCollection.AddDbContext<MyContext>
+                (
+                    options => options.UseMySql(Environment.GetEnvironmentVariable("DB_CONNECTION_MYSQL"))
+                );
+            }
         }
     }
 }

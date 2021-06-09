@@ -56,7 +56,7 @@ namespace Api.Application.Controllers
 
         [HttpPost]
         [Authorize("Bearer")]
-        public async Task<ActionResult> Post([FromBody] UserDTO user)
+        public async Task<ActionResult> Post([FromBody] UserDTOCreate user)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -77,7 +77,7 @@ namespace Api.Application.Controllers
 
         [HttpPut]
         [Authorize("Bearer")]
-        public async Task<ActionResult> Put([FromBody] UserDTO user)
+        public async Task<ActionResult> Put([FromBody] UserDTOUpdate user)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

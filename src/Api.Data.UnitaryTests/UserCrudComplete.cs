@@ -43,16 +43,16 @@ namespace Api.Data.UnitaryTests
             }
         }
 
-        public async Task TestaCriacaoUsuario(UserImplementation repositorio, UserEntity entity)
+        private async Task TestaCriacaoUsuario(UserImplementation repositorio, UserEntity entity)
         {
             var _registroCriado = await repositorio.InsertAsync(entity);
             Assert.NotNull(_registroCriado);
-            Assert.Equal(entity.Email, _registroCriado.Email);
             Assert.Equal(entity.Name, _registroCriado.Name);
+            Assert.Equal(entity.Email, _registroCriado.Email);
             Assert.False(_registroCriado.Id == Guid.Empty);
         }
 
-        public async Task TestaAtualizacaoUsuario(UserImplementation repositorio, UserEntity entity)
+        private async Task TestaAtualizacaoUsuario(UserImplementation repositorio, UserEntity entity)
         {
             entity.Name = Faker.Name.First();
             var _registroAtualizado = await repositorio.UpdateAsync(entity);
@@ -61,13 +61,13 @@ namespace Api.Data.UnitaryTests
             Assert.Equal(entity.Email, _registroAtualizado.Email);
         }
 
-        public async Task TestaExistAsync(UserImplementation repositorio, UserEntity entity)
+        private async Task TestaExistAsync(UserImplementation repositorio, UserEntity entity)
         {
             var _registroExiste = await repositorio.ExistAsync(entity.Id);
             Assert.True(_registroExiste);
         }
 
-        public async Task TestaSelecionaUsuarioPorId(UserImplementation repositorio, UserEntity entity)
+        private async Task TestaSelecionaUsuarioPorId(UserImplementation repositorio, UserEntity entity)
         {
             var _registroSelecionado = await repositorio.SelectAsync(entity.Id);
             Assert.NotNull(_registroSelecionado);
@@ -75,20 +75,20 @@ namespace Api.Data.UnitaryTests
             Assert.Equal(entity.Email, _registroSelecionado.Email);
         }
 
-        public async Task TestaSelecaoTodosusuarios(UserImplementation repositorio, UserEntity entity)
+        private async Task TestaSelecaoTodosusuarios(UserImplementation repositorio, UserEntity entity)
         {
             var _todosRegistros = await repositorio.SelectAllAsync();
             Assert.NotNull(_todosRegistros);
             Assert.True(_todosRegistros.Count() > 0);
         }
 
-        public async Task TestaRemocaoUsuario(UserImplementation repositorio, UserEntity entity)
+        private async Task TestaRemocaoUsuario(UserImplementation repositorio, UserEntity entity)
         {
             var _removeu = await repositorio.DeleteAsync(entity.Id);
             Assert.True(_removeu);
         }
 
-        public async Task TestaLogin(UserImplementation repositorio, UserEntity entity)
+        private async Task TestaLogin(UserImplementation repositorio, UserEntity entity)
         {
             var _login = await repositorio.FindByLogin(entity.Email);
             Assert.NotNull(_login);

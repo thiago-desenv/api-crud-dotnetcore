@@ -46,6 +46,15 @@
                 "test",
                 "${workspaceFolder}/src/Api.Data.UnitaryTests/UnitaryTests.csproj"
             ]
+        },
+        {
+            "label": "Service.UnitaryTests",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "test",
+                "${workspaceFolder}/src/Api.Service.UnitaryTests/UnitaryTest.csproj"
+            ]
         }
     ]
 }

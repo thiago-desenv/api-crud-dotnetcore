@@ -70,8 +70,8 @@ namespace Api.Service.UnitaryTest.User
             userDTOUpdateResult = new UserDTOUpdateResult
             {
                 Id = IdUsuario,
-                Name = NomeUsuario,
-                Email = EmailUsuario,
+                Name = NomeUsuarioAlterado,
+                Email = EmailUsuarioAlterado,
                 UpdateAt = DateTime.Now
             };
         }

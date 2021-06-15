@@ -14,7 +14,7 @@ namespace Api.Service.UnitaryTest.User
         private Mock<IUserService> _serviceMock;
 
         [Fact(DisplayName = "Teste método GETALL")]
-        public async Task realiza_Teste_Metodo_GETALL()
+        public async Task Realiza_Teste_Metodo_GETALL()
         {
             _serviceMock = new Mock<IUserService>();
             _serviceMock.Setup(m => m.GetAll()).ReturnsAsync(lsUserDTO);

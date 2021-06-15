@@ -53,7 +53,7 @@
             "type": "process",
             "args": [
                 "test",
-                "${workspaceFolder}/src/Api.Service.UnitaryTests/UnitaryTest.csproj"
+                "${workspaceFolder}/src/Api.Service.UnitaryTest/UnitaryTest.csproj"
             ]
         }
     ]

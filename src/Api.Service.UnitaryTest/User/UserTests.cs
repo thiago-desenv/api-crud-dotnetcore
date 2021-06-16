@@ -1,11 +1,16 @@
 using System;
 using System.Collections.Generic;
 using Api.Domain.DTOS.User;
+using Api.Domain.Interfaces.Services.User;
+using Moq;
 
 namespace Api.Service.UnitaryTest.User
 {
     public class UserTests
     {
+        public IUserService _serviceTest;
+        public Mock<IUserService> _serviceMock;
+
         public static string NomeUsuario { get; set; }
         public static string EmailUsuario { get; set; }
         public static string NomeUsuarioAlterado { get; set; }

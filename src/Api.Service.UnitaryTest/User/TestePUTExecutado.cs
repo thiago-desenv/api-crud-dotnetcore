@@ -7,9 +7,6 @@ namespace Api.Service.UnitaryTest.User
 {
     public class TestePUTExecutado : UserTests
     {
-        private IUserService _serviceTest;
-        private Mock<IUserService> _serviceMock;
-
         [Fact(DisplayName = "Testa método PUT")]
         public async Task Realiza_Teste_Metodo_PUT()
         {

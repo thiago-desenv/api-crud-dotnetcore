@@ -10,9 +10,6 @@ namespace Api.Service.UnitaryTest.User
 {
     public class TesteGetAllExecutado : UserTests
     {
-        private IUserService _serviceTest;
-        private Mock<IUserService> _serviceMock;
-
         [Fact(DisplayName = "Teste método GETALL")]
         public async Task Realiza_Teste_Metodo_GETALL()
         {

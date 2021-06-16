@@ -9,9 +9,6 @@ namespace Api.Service.UnitaryTest.User
 {
     public class TesteGetExecutado : UserTests
     {
-        private IUserService _serviceTest;
-        private Mock<IUserService> _serviceMock;
-
         [Fact(DisplayName = "Teste método GET")]
         public async Task Realiza_Teste_Metodo_GET()
         {

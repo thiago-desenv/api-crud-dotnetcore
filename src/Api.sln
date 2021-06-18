@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitaryTests", "Api.Data.Un
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitaryTest", "Api.Service.UnitaryTest\UnitaryTest.csproj", "{F7D94699-1420-4FE5-A2C4-F2A7DF9A7A96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitaryTests", "Api.Application.Tests\UnitaryTests.csproj", "{5749E2B4-E6C7-4F1A-B78E-D5F1FF406978}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitaryTestsApplication", "Api.Application.Tests\UnitaryTests.csproj", "{5749E2B4-E6C7-4F1A-B78E-D5F1FF406978}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

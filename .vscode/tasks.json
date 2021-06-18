@@ -64,6 +64,15 @@
                 "test",
                 "${workspaceFolder}/src/Api.Application.Tests/UnitaryTests.csproj"
             ]
+        },
+        {
+            "label": "Integration.Test",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "test",
+                "${workspaceFolder}/src/Api.Integration.Test/IntegrationTest.csproj"
+            ]
         }
     ]
 }

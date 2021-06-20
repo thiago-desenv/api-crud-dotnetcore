@@ -58,12 +58,6 @@ namespace application
             var signingConfigurations = new SigningConfigurations();
             services.AddSingleton(signingConfigurations);
 
-            var tokenConfiguration = new TokenConfiguration();
-            new ConfigureFromConfigurationOptions<TokenConfiguration>(Configuration
-                .GetSection("TokenConfigurations"))
-                .Configure(tokenConfiguration);
-            services.AddSingleton(tokenConfiguration);
-
             services.AddAuthentication(authOptions =>
             {
                 authOptions.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -72,8 +66,8 @@ namespace application
             {
                 var paramsValiation = bearerOptions.TokenValidationParameters;
                 paramsValiation.IssuerSigningKey = signingConfigurations.Key;
-                paramsValiation.ValidAudience = tokenConfiguration.Audience;
-                paramsValiation.ValidIssuer = tokenConfiguration.Issuer;
+                paramsValiation.ValidAudience = Environment.GetEnvironmentVariable("Audience");
+                paramsValiation.ValidIssuer = Environment.GetEnvironmentVariable("Issuer");
                 paramsValiation.ValidateIssuerSigningKey = true;
                 paramsValiation.ValidateLifetime = true;
                 paramsValiation.ClockSkew = TimeSpan.Zero;

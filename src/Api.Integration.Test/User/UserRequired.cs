@@ -26,6 +26,7 @@ namespace Api.Integration.Test.User
         public async Task Realiza_Teste_CRUD_Usuario()
         {
             await AddToken();
+
             var userDTO = new UserDTOCreate() { Name = _name, Email = _email };
 
             var response = await PostJsonAsync(userDTO, $"{HostApi}users", Client);
@@ -41,6 +42,7 @@ namespace Api.Integration.Test.User
         public async Task Realiza_Teste_GetAll()
         {
             await AddToken();
+
             var response = await Client.GetAsync($"{HostApi}users");
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
@@ -54,13 +56,13 @@ namespace Api.Integration.Test.User
         public async Task Realiza_Teste_Metodo_PUT()
         {
             await AddToken();
-            
+
             string idGuidMock = "E5B0E755-91C7-43E1-9053-422F0FA828D6";
             var responseGet = await Client.GetAsync($"{HostApi}users/{idGuidMock}");
             var strResponseGet = await responseGet.Content.ReadAsStringAsync();
             var convertGetFromUserDTO = JsonConvert.DeserializeObject<UserDTO>(strResponseGet);
 
-            var user = new UserDTOUpdate() 
+            var user = new UserDTOUpdate()
             {
                 Id = convertGetFromUserDTO.Id,
                 Name = "Thiago Xavier Ferreira",
@@ -77,6 +79,22 @@ namespace Api.Integration.Test.User
             Assert.Equal(registerUpdated.Id, user.Id);
             Assert.Equal(registerUpdated.Name, user.Name);
             Assert.Equal(registerUpdated.Email, user.Email);
+        }
+
+        [Fact(DisplayName = "Testa método Get")]
+        public async Task Realiza_Teste_Metodo_Get()
+        {
+            await AddToken();
+
+            Guid idGuidMock = Guid.Parse("E5B0E755-91C7-43E1-9053-422F0FA828D6");
+            var responseGet = await Client.GetAsync($"{HostApi}users/{idGuidMock}");
+            var strResponseGet = await responseGet.Content.ReadAsStringAsync();
+
+            var returnGet = JsonConvert.DeserializeObject<UserDTO>(strResponseGet);
+            Assert.True(responseGet.StatusCode == HttpStatusCode.OK);
+            Assert.Equal(returnGet.Id, idGuidMock);
+            Assert.Equal(returnGet.Name, "Thiago Xavier Ferreira");
+            Assert.Equal(returnGet.Email, "thiago@hotmail.com");
         }
     }
 }

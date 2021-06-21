@@ -34,7 +34,7 @@ namespace application
         {
             if (_environment.IsEnvironment("Testing"))
             {
-                Environment.SetEnvironmentVariable("DB_CONNECTION_SQLSERVER", "Persist Security Info=True;Data Source=XXX;Initial Catalog=dbapi_integration;Integrated Security=True");
+                Environment.SetEnvironmentVariable("DB_CONNECTION_SQLSERVER", "Persist Security Info=True;Data Source=WINAP9PSX6DQSD3;Initial Catalog=dbapi_integration;Integrated Security=True");
                 Environment.SetEnvironmentVariable("DATABASE", "SQLSERVER");
                 Environment.SetEnvironmentVariable("MIGRATION", "APLICADO");
                 Environment.SetEnvironmentVariable("Audience", "ExemploAudience");

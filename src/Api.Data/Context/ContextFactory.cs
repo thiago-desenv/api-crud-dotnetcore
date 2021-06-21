@@ -8,12 +8,20 @@ namespace Api.Data.Context
         public MyContext CreateDbContext(string[] args)
         {
             //Usado para criar as migrações
-            //var connectionStringMySql = "Server=localhost;Port=3306;Database=xxx;Uid=root;Pwd=xxx";
-            var connectionStringSqlServer = @"Data Source=DESKTOP-2GT602A\SQLEXPRESS;Initial Catalog=dbapi;Integrated Security=True";
+            var typeDataBase = "SQLSERVER";
+            var connectionString = @"Persist Security Info=True;Data Source=WINAP9PSX6DQSD3;Initial Catalog=dbapi;Integrated Security=True";
             var optionsBuilder = new DbContextOptionsBuilder<MyContext>();
-            //optionsBuilder.UseMySql(connectionStringSqlServer);
-            optionsBuilder.UseSqlServer(connectionStringSqlServer);
+
+            ConfigureDataBase(typeDataBase, connectionString, optionsBuilder);
             return new MyContext(optionsBuilder.Options);
+        }
+
+        private void ConfigureDataBase(string typeDataBase,string connectionString, DbContextOptionsBuilder<MyContext> optionsBuilder)
+        {
+            if(typeDataBase.ToUpper() == "SQLSERVER") 
+                optionsBuilder.UseSqlServer(connectionString);
+            else
+                optionsBuilder.UseMySql(connectionString);
         }
     }
 }

@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Api.Domain.DTOS.User;
@@ -12,13 +14,16 @@ namespace Api.Integration.Test.User
         private string _name { get; set; }
         private string _email { get; set; }
 
+        public UserRequired()
+        {
+            _name = Faker.Name.First();
+            _email = Faker.Internet.Email();
+        }
+
         [Fact(DisplayName = "Teste usuário")]
         public async Task Realiza_Teste_CRUD_Usuario()
         {
             await AddToken();
-            _name = Faker.Name.First();
-            _email = Faker.Internet.Email();
-
             var userDTO = new UserDTOCreate() { Name = _name, Email = _email };
 
             var response = await PostJsonAsync(userDTO, $"{HostApi}users", Client);
@@ -29,6 +34,20 @@ namespace Api.Integration.Test.User
             Assert.Equal(registroPost.Email, userDTO.Email);
             Assert.NotNull(registroPost.Id);
             Assert.False(registroPost.Id == default(Guid));
+        }
+
+        [Fact(DisplayName = "Teste método GetAll")]
+        public async Task Realiza_Teste_GetAll()
+        {
+            await AddToken();
+            var response = await Client.GetAsync($"{HostApi}users");
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+
+            var jsonResult = await response.Content.ReadAsStringAsync();
+            var lsFromJson = JsonConvert.DeserializeObject<IEnumerable<UserDTO>>(jsonResult);
+            Assert.NotNull(lsFromJson);
+            Assert.True(lsFromJson.Count() > 0);
+
         }
     }
 }

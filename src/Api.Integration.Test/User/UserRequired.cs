@@ -96,5 +96,18 @@ namespace Api.Integration.Test.User
             Assert.Equal(returnGet.Name, "Thiago Xavier Ferreira");
             Assert.Equal(returnGet.Email, "thiago@hotmail.com");
         }
+
+        [Fact(DisplayName = "Teste método Delete")]
+        public async Task Realiza_Teste_Metodo_Delete()
+        {
+            await AddToken();
+
+            Guid idGuidMock = Guid.Parse("2F46AA59-3098-4336-AB15-A0FFBE05A720");
+            var responseDelete = await Client.DeleteAsync($"{HostApi}users/{idGuidMock}");
+            Assert.True(responseDelete.StatusCode == HttpStatusCode.OK);
+            var strResponseDelete = await responseDelete.Content.ReadAsStringAsync();
+            bool blResponseDelete = Convert.ToBoolean(strResponseDelete);
+            Assert.True(blResponseDelete);
+        }
     }
 }

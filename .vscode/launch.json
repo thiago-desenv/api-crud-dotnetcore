@@ -24,7 +24,7 @@
                 "DB_CONNECTION_SQLSERVER": "Persist Security Info=True;Data Source=WINAP9PSX6DQSD3;Initial Catalog=dbapi;Integrated Security=True",
                 "DB_CONNECTION_MYSQL": "Server=localhost;Port=3306;Database=xxx;Uid=root;Pwd=xxx",
                 "DATABASE": "SQLSERVER",
-                "MIGRATION": "APLICAR",
+                "MIGRATION": "APLICADO",
                 "Audience": "ExemploAudience",
                 "Issuer": "ExemploIssuer",
                 "Seconds": "1800"

@@ -5,7 +5,7 @@ namespace Api.Domain.DTOS.UF
     public class UfDTO
     {
         public Guid Id { get; set; }
-        public string Sigla { get; set; }
-        public string Nome { get; set; }
+        public string FederateUnit { get; set; }
+        public string Name { get; set; }
     }
 }

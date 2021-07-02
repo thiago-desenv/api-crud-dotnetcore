@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Api.Domain.Entities
 {
-    public class CountEntity : BaseEntity
+    public class CountyEntity : BaseEntity
     {
         [Required]
         [MaxLength(60)]

@@ -19,6 +19,6 @@ namespace Api.Domain.Entities
         [Required]
         public Guid CountyID { get; set; }
 
-        public CountEntity County { get; set; }
+        public CountyEntity County { get; set; }
     }
 }

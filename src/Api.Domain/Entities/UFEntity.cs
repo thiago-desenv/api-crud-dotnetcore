@@ -7,11 +7,11 @@ namespace Api.Domain.Entities
     {
         [Required]
         [MaxLength(2)]
-         public string FederateUnit { get; set; } 
+        public string FederateUnit { get; set; }
 
-         [Required]
-         [MaxLength(45)]
-         public string Name { get; set; }
-         public IEnumerable<CountEntity> Countys { get; set; }
+        [Required]
+        [MaxLength(45)]
+        public string Name { get; set; }
+        public IEnumerable<CountyEntity> Countys { get; set; }
     }
 }

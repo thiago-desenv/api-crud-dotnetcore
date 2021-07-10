@@ -36,7 +36,7 @@ namespace Api.Data.UnitaryTests
 
                 await TesteExistAsync(_repositorio, _entity);
                 await TesteSelecionaUFPorId(_repositorio, _entity);
-                await TesteSelecaoTodasUFs(_repositorio, _entity);
+                await TesteSelecaoTodasUFs(_repositorio);
             }
         }
 
@@ -55,11 +55,11 @@ namespace Api.Data.UnitaryTests
             Assert.Equal(_registroSelecionado.FederateUnit, entity.FederateUnit);
         }
 
-        private async Task TesteSelecaoTodasUFs(UFImplementation repositorio, UFEntity entity)
+        private async Task TesteSelecaoTodasUFs(UFImplementation repositorio)
         {
             var _todosRegistros = await repositorio.SelectAllAsync();
             Assert.NotNull(_todosRegistros);
-            Assert.True(_todosRegistros.Count() == 28);
+            Assert.True(_todosRegistros.Count() == 27);
         }
     }
 }

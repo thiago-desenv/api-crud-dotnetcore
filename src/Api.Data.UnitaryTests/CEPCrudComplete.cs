@@ -44,6 +44,9 @@ namespace Api.Data.UnitaryTests
                 };
 
                 await TesteInsereCEP(_repositorioCEP, _entityCEP);
+                await TesteAtualizaCEP(_repositorioCEP, _entityCEP);
+                await TesteExistAsync(_repositorioCEP, _entityCEP);
+                await TesteSelecionaPorId(_repositorioCEP, _entityCEP);
             }
 
         }
@@ -69,6 +72,34 @@ namespace Api.Data.UnitaryTests
             Assert.Equal(_registroCEPCriado.Numero, entity.Numero);
             Assert.Equal(_registroCEPCriado.CountyID, entity.CountyID);
             Assert.False(_registroCEPCriado.Id == Guid.Empty);
+        }
+
+        private async Task TesteAtualizaCEP(CEPImplementation repositorio, CEPEntity entity)
+        {
+            entity.Logradouro = Faker.Address.StreetName();
+            var _registroAtualizado = await repositorio.UpdateAsync(entity);
+            Assert.NotNull(_registroAtualizado);
+            Assert.Equal(_registroAtualizado.CEP, entity.CEP);
+            Assert.Equal(_registroAtualizado.Logradouro, entity.Logradouro);
+            Assert.Equal(_registroAtualizado.Numero, entity.Numero);
+            Assert.Equal(_registroAtualizado.CountyID, entity.CountyID);
+            Assert.True(_registroAtualizado.Id == entity.Id);
+        }
+
+        private async Task TesteExistAsync(CEPImplementation repositorio, CEPEntity entity)
+        {
+            var _registroExiste = await repositorio.ExistAsync(entity.Id);
+            Assert.True(_registroExiste);
+        }
+
+        private async Task TesteSelecionaPorId(CEPImplementation repositorio, CEPEntity entity)
+        {
+            var _registroSelecionado = await repositorio.SelectAsync(entity.Id);
+            Assert.NotNull(_registroSelecionado);
+            Assert.Equal(_registroSelecionado.CEP, entity.CEP);
+            Assert.Equal(_registroSelecionado.Logradouro, entity.Logradouro);
+            Assert.Equal(_registroSelecionado.Numero, entity.Numero);
+            Assert.Equal(_registroSelecionado.CountyID, entity.CountyID);
         }
     }
 }

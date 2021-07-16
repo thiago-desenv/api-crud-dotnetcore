@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Api.Domain.DTOS.CEP
 {
-    public class CepDTPUpdate
+    public class CepDTOUpdate
     {
         [Required(ErrorMessage = "Id é um campo obrigatório")]
         public Guid Id { get; set; }

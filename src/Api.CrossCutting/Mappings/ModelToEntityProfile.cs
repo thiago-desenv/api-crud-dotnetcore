@@ -8,7 +8,10 @@ namespace Api.CrossCutting.Mappings
     {
         public ModelToEntityProfile()
         {
-            CreateMap<UserEntity, UserModel>().ReverseMap();
+            CreateMap<UserModel, UserEntity>().ReverseMap();
+            CreateMap<UFModel, UFEntity>().ReverseMap();
+            CreateMap<CountyModel, CountyEntity>().ReverseMap();
+            CreateMap<CEPModel, CEPEntity>().ReverseMap();
         }
     }
 }

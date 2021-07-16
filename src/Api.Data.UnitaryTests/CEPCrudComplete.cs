@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Api.Data.Context;
 using Api.Data.Implementations;
@@ -47,6 +48,9 @@ namespace Api.Data.UnitaryTests
                 await TesteAtualizaCEP(_repositorioCEP, _entityCEP);
                 await TesteExistAsync(_repositorioCEP, _entityCEP);
                 await TesteSelecionaPorId(_repositorioCEP, _entityCEP);
+                await TesteSelecionaPorCEP(_repositorioCEP, _entityCEP);
+                await TesteSelecionaTodosRegistros(_repositorioCEP);
+                await TesteDeletePorID(_repositorioCEP, _entityCEP);
             }
 
         }
@@ -100,6 +104,31 @@ namespace Api.Data.UnitaryTests
             Assert.Equal(_registroSelecionado.Logradouro, entity.Logradouro);
             Assert.Equal(_registroSelecionado.Numero, entity.Numero);
             Assert.Equal(_registroSelecionado.CountyID, entity.CountyID);
+        }
+
+        private async Task TesteSelecionaPorCEP(CEPImplementation repositorio, CEPEntity entity)
+        {
+            var _registroSelecionado = await repositorio.SelectAsync(entity.CEP);
+            Assert.NotNull(_registroSelecionado);
+            Assert.Equal(_registroSelecionado.CEP, entity.CEP);
+            Assert.Equal(_registroSelecionado.Logradouro, entity.Logradouro);
+            Assert.Equal(_registroSelecionado.Numero, entity.Numero);
+            Assert.Equal(_registroSelecionado.CountyID, entity.CountyID);
+            Assert.NotNull(_registroSelecionado.County);
+            Assert.NotNull(_registroSelecionado.County.UF);
+        }
+
+        private async Task TesteSelecionaTodosRegistros(CEPImplementation repositorio)
+        {
+            var _registrosSelecionados = await repositorio.SelectAllAsync();
+            Assert.NotNull(_registrosSelecionados);
+            Assert.True(_registrosSelecionados.Count() > 0);
+        }
+
+        private async Task TesteDeletePorID(CEPImplementation repositorio, CEPEntity entity)
+        {
+            var _removeu = await repositorio.DeleteAsync(entity.Id);
+            Assert.True(_removeu);
         }
     }
 }

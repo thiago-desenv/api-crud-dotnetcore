@@ -12,7 +12,7 @@ namespace Api.Data.Mapping
 
             builder.HasKey(u => u.Id);
 
-            builder.HasIndex(u => u.FederateUnit)
+            builder.HasIndex(u => u.UF)
                     .IsUnique();
         }
     }

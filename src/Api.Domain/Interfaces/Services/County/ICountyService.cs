@@ -7,7 +7,7 @@ namespace Api.Domain.Interfaces.Services.County
 {
     public interface ICountyService
     {
-        Task<CountyDTO> GetTask(Guid id);
+        Task<CountyDTO> Get(Guid id);
         Task<CountyDTOComplete> GetCompleteById(Guid id);
         Task<CountyDTOComplete> GetCompleteByIBGE(int codIBGE);
         Task<IEnumerable<CountyDTO>> GetAll();

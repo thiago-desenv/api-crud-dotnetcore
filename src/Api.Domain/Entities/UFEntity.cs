@@ -7,7 +7,7 @@ namespace Api.Domain.Entities
     {
         [Required]
         [MaxLength(2)]
-        public string FederateUnit { get; set; }
+        public string UF { get; set; }
 
         [Required]
         [MaxLength(45)]

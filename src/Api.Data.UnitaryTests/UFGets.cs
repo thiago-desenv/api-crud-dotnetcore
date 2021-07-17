@@ -30,7 +30,7 @@ namespace Api.Data.UnitaryTests
                 UFEntity _entity = new UFEntity()
                 {
                     Id = new Guid("e7e416de-477c-4fa3-a541-b5af5f35ccf6"),
-                    FederateUnit = "SP",
+                    UF = "SP",
                     Name = "São Paulo"
                 };
 
@@ -52,7 +52,7 @@ namespace Api.Data.UnitaryTests
             Assert.NotNull(_registroSelecionado);
             Assert.Equal(_registroSelecionado.Id, entity.Id);
             Assert.Equal(_registroSelecionado.Name, entity.Name);
-            Assert.Equal(_registroSelecionado.FederateUnit, entity.FederateUnit);
+            Assert.Equal(_registroSelecionado.UF, entity.UF);
         }
 
         private async Task TesteSelecaoTodasUFs(UFImplementation repositorio)

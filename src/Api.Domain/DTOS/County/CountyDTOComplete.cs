@@ -6,7 +6,7 @@ namespace Api.Domain.DTOS.County
     public class CountyDTOComplete
     {
         public Guid Id { get; set; }
-        public string Nome { get; set; }
+        public string Name { get; set; }
         public int CodIBGE { get; set; }
         public Guid UFId { get; set; }
         public UfDTO UF { get; set; }

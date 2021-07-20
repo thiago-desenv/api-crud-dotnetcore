@@ -10,7 +10,7 @@ namespace Api.Domain.DTOS.County
 
         [Required(ErrorMessage = "Município é um campo obrigatório")]
         [StringLength(60, ErrorMessage = "O campo município deve ter no máximo {1} caracteres")]
-        public string Nome { get; set; }
+        public string Name { get; set; }
 
         [Range(0, int.MaxValue, ErrorMessage = "Código do IBGE inválido")]
         public int CodIBGE { get; set; }

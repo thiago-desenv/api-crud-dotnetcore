@@ -40,7 +40,7 @@ namespace Api.Integration.Test
 
         public async Task AddToken()
         {
-            var loginDTO = new LoginDTO() { Email = "administrator@hotmail.com" };
+            var loginDTO = new LoginDTO() { Email = "administrator@admin.com" };
 
             var resultLogin = await PostJsonAsync(loginDTO, $"{HostApi}login", Client);
             var jsonLogin = await resultLogin.Content.ReadAsStringAsync();

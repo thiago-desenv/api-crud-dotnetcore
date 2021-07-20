@@ -22,6 +22,7 @@ namespace Api.Service.UnitaryTest.AutoMapper
             ModelToEntity(model);
             EntityToDTO();
             ListEntityToListDTO(listaEntity);
+            DTOToModel(CriaObjetoDTO());
         }
 
         private void ModelToEntity(UFModel model)
@@ -38,10 +39,10 @@ namespace Api.Service.UnitaryTest.AutoMapper
         {
             var entity = CriaObjetoUFEntity();
 
-            var userDTO = Mapper.Map<UfDTO>(entity);
-            Assert.Equal(userDTO.Id, entity.Id);
-            Assert.Equal(userDTO.Name, entity.Name);
-            Assert.Equal(userDTO.UF, entity.UF);
+            var ufDTO = Mapper.Map<UfDTO>(entity);
+            Assert.Equal(ufDTO.Id, entity.Id);
+            Assert.Equal(ufDTO.Name, entity.Name);
+            Assert.Equal(ufDTO.UF, entity.UF);
         }
 
         private void ListEntityToListDTO(List<UFEntity> listaEntity)
@@ -54,6 +55,14 @@ namespace Api.Service.UnitaryTest.AutoMapper
                 Assert.Equal(listaDTO[i].Name, listaEntity[i].Name);
                 Assert.Equal(listaDTO[i].UF, listaEntity[i].UF);
             }
+        }
+
+        private void DTOToModel(UfDTO objectDTO)
+        {
+            var ufModel = Mapper.Map<UFModel>(objectDTO);
+            Assert.Equal(ufModel.Id, objectDTO.Id);
+            Assert.Equal(ufModel.Name, objectDTO.Name);
+            Assert.Equal(ufModel.UF, objectDTO.UF);
         }
 
         private UFModel CriaObjetoUFModel()
@@ -77,6 +86,16 @@ namespace Api.Service.UnitaryTest.AutoMapper
                 UF = Faker.Address.UsState().Substring(1, 3),
                 CreateAt = DateTime.Now,
                 UpdateAt = DateTime.Now
+            };
+        }
+
+        private UfDTO CriaObjetoDTO()
+        {
+            return new UfDTO
+            {
+                Id = Guid.NewGuid(),
+                Name = Faker.Address.UsState(),
+                UF = Faker.Address.UsState().Substring(1, 3),
             };
         }
     }

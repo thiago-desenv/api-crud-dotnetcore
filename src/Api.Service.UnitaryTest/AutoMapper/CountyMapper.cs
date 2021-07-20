@@ -17,7 +17,18 @@ namespace Api.Service.UnitaryTest.AutoMapper
             for (int i = 0; i < 5; i++)
                 listaEntity.Add(CriaObjetoEntity());
 
+            ModelToEntity(model);
+        }
 
+        private void ModelToEntity(CountyModel countyModel)
+        {
+            var entity = Mapper.Map<CountyEntity>(countyModel);
+            Assert.Equal(entity.Id, countyModel.Id);
+            Assert.Equal(entity.Name, countyModel.Name);
+            Assert.Equal(entity.CodIBGE, countyModel.CodIBGE);
+            Assert.Equal(entity.UFId, countyModel.UFId);
+            Assert.Equal(entity.CreateAt, countyModel.CreateAt);
+            Assert.Equal(entity.UpdateAt, countyModel.UpdateAt);
         }
 
         private CountyModel CriaObjetoModel()
